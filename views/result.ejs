@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>result</title>
+
+    <link rel="stylesheet" href="./MyStylesHTML/MyStyle.css">	
+
+    <meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+    <meta name="author" contetnt="Petrov Maksim">
+    <meta name="viewport" content="width=device-width , initial - scale = 1.0">
+
+</head>
+<body>
+
+    <div style="text-align: center; font-family: Arial">
+        <div class="subtitle-box">
+            <h1>Записи по вашему запросу: </h1>
+        </div>
+        <br>
+        <br>
+        
+        <% find.forEach(item => { %>
+            <hr>
+            <div class="subtitle-box">
+                <h3 class="subtitle"> <b> Заголовок: </b> </h3>
+            </div>
+            <br>
+            <p class="note"><%= item.note %></p>
+        
+            <div class="subtitle-box">
+                <h3 class="subtitle"> <b> Метки: </b> </h3>
+            </div>
+            <br>
+            <p class="chips"><%= item.chips %></p>
+        
+            <div class="subtitle-box">
+                <h3 class="subtitle"> <b>Текст записи: </b> </h3>
+            </div>
+            <br>
+            <p class="note-text"><%= item.note_text %></p>
+        
+            <div class="subtitle-box">
+                <h3 class="subtitle"> <b> Прикрепленные файлы: </b> </h3>
+            </div>
+            <br>
+            <br>
+        
+            <% item.file_dir.split(', ').forEach(ref => { %>
+                <ul>
+                    <a href="<%= ref %>" download="<%= ref %>"><%= ref %></a>
+                </ul>
+            <% }); %>
+        
+            <br>
+        <% }); %>
+
+    </div>
+
+</body>       
+
+</html>

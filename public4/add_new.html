@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Добавление новой записи</title>
+	<meta name="author" contetnt="Petrov Maksim">
+    <meta name="viewport" content="width=device-width , initial - scale = 1.0">
+	
+	<link rel="stylesheet" href="./MyStylesHTML/MyStyle.css">	
+  </head>
+  <body>
+	<div class="form-container">
+		<div class="subtitle-box">
+			<h1>Добавление новой записи</h1>
+		</div>
+		<hr>
+	<form  method="post" id="myform" enctype="multipart/form-data" action="http://localhost:3000/CreateEndpoint" name="myform" >
+		<!-- "multipart/form-data" позволяет в одном пакете передавать несколько файлов -->
+		<!-- action указывает URL, на который будут отправлены данные формы при её отправке. -->
+		<div class="form-section"> 
+			<!-- div для группировки и силизации содержимого -->
+		<div class="subtitle-box"> <h3> Заголовок записи: </h3> </div>
+		<textarea  placeholder="Введите заголовок" rows="1" cols="50" name="note" id="note"></textarea> 
+		</div>
+		<br>
+
+		<div class="subtitle-box"><h3> Метки записи (выбор из стандартных): </h3></div>
+		<br>
+		<br>
+    	<select id="chips" name="chips" multiple>
+      	<option value="Работа">Работа</option>
+      	<option value="Учеба">Учеба</option>
+      	<option value="Дом">Дом</option>
+    	</select>
+		<br>
+		<br>
+		<br>
+		<div class="subtitle-box"><h3> Свои метки записи: </h3></div>
+		<textarea  placeholder="Введите метки" rows="1" cols="50" id="chips" name="chips"></textarea> 
+		<br>
+		<br>
+		<br>
+		<div class="subtitle-box"><h3> Текст записи: </h3></div>
+		<textarea placeholder="Введите текст" rows="20" cols="120" id="note_text" name="note_text"></textarea> 
+		<br>
+		<br>
+		<input type="file" multiple id="file_dir" name="file_dir"  >
+		
+		<input type="submit" value="Загрузить" class="custom-button"/>
+	</div>
+
+	</form>
+</body>
+</html>

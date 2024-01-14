@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" contetnt="Petrov Maksim">
+
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width , initial - scale = 1.0">
+    <title> Электронная записная книжка </title>
+    
+    <link rel="stylesheet" href="./MyStylesHTML/MyStyle.css">	
+    
+</head>
+<body>
+    <div style="text-align: center; font-family: Arial;">
+
+        <h1>Электронная записная книжка</h1>
+        <br>
+
+        <h2>Добавьте новую запись или найдите существующую</h2>
+        <br>
+        <form action="./add_new.html" method="get">
+            
+            <!-- изменяем адрес страницы -->
+            <button onclick="window.location.href='add_new.html'" class = "custom-button"> Создать новую запись</button>
+
+        </form>
+
+        <p>Или</p>
+
+        <form action="./search_records.html" method="get">
+
+            <button onclick="window.location.href='search_records.html'" class = "custom-button"> Найти запись</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html land = "en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" contetnt="Petrov Maksim">
+
+    <title> Найти записи</title>
+
+    <link rel="stylesheet" href="./MyStylesHTML/MyStyle.css">	
+    
+    <meta name="viewport" content="width=device-width , initial - scale = 1.0">
+    
+</head>
+<body>
+    <div style="text-align: center;">
+    <div class="search"> <h1> Выберите один из предложенных вариантов поиска</h1>
+    </div>
+    <br>
+
+    <form  method="post" enctype="application/x-www-form-urlencoded" action="./find_note" id="note_s" name="note_s">
+        <!-- enctype="application/x-www-form-urlencoded" это стандартное значение(данные кодируются в специальном url формате). 
+            Для отправки обычных текстовых данных -->
+
+        <div class="search"><h2> Поиск по слову в заголовке</h2></div>
+
+        <textarea  rows="1" cols="30" id="note", name="note"></textarea> 
+        <!-- submit это стандартная отправка формы на сервер, а button это кнопка от js, которая может включать переход на другую страницу или содержать картинку  -->
+        <input type="submit" class="custom-button" value="Поиск"/>
+        <br>
+    </form>
+
+    <form  method="post" enctype="application/x-www-form-urlencoded" action="./find_chips" id="chips_s"  name="chips_s">
+
+        <div class="search"><h2> Поиск по метке</h2></div>
+
+        <textarea  rows="1" cols="30" id="chips" name="chips"></textarea> 
+
+        <input type="submit" class="custom-button" value="Поиск"/>
+        <br>
+    </form>
+
+    <form method="post" enctype="application/x-www-form-urlencoded" action="./find_note_text" id="note_text_s" name="note_text_s">
+        <div class="search"><h2> Поиск по слову в тексте</h2></div>
+    
+        <textarea  rows="1" cols="30"  id="note_text" name="note_text"></textarea> 
+
+        <input type="submit" class="custom-button" value="Поиск"/>
+        <br>
+
+    </form>
+
+    </div>
+</body>
+</html>
